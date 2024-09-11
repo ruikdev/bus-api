@@ -4,7 +4,7 @@ import json
 
 def test_api(stop_id):
     # Remplacez l'URL par l'adresse de votre serveur
-    url = f"http://172.252.236.136:2064/{stop_id}"
+    url = f"http://localhost:5000/horaire/{stop_id}"
 
     try:
         response = requests.get(url)
