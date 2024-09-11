@@ -41,11 +41,9 @@ def scrape_t2c_horaires(stop_id):
         print(f"Une erreur inattendue s'est produite : {e}")
         return None, None
 
-# Utilisation du scraper
 stop_id = "3377837159481522"
 resultats, perturbation = scrape_t2c_horaires(stop_id)
 
-# Affichage des résultats
 if resultats:
     print("Prochains départs :")
     print("-" * 50)
