@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 import requests
 from bs4 import BeautifulSoup
+import os
 
 app = Flask(__name__)
 
@@ -43,7 +44,7 @@ def scrape_t2c_horaires(stop_id):
         return None, f"Une erreur inattendue s'est produite : {e}"
 
 
-@app.route('/<stop_id>')
+@app.route('/horaire/<stop_id>')
 def get_horaires(stop_id):
     resultats, perturbation = scrape_t2c_horaires(stop_id)
 
