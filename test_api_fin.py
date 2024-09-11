@@ -3,12 +3,11 @@ import json
 
 
 def test_api(stop_id):
-    # Remplacez l'URL par l'adresse de votre serveur
     url = f"http://localhost:5000/horaire/{stop_id}"
 
     try:
         response = requests.get(url)
-        response.raise_for_status()  # Lève une exception pour les codes d'erreur HTTP
+        response.raise_for_status()
 
         data = response.json()
 
@@ -32,6 +31,5 @@ def test_api(stop_id):
         print(f"Une erreur inattendue s'est produite : {e}")
 
 
-# Test de l'API avec un ID d'arrêt
 stop_id = "3377837159481522"  # Remplacez par l'ID de l'arrêt que vous voulez tester
 test_api(stop_id)
